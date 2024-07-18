@@ -8,7 +8,6 @@ Day 1
 -i finished all cases and made sure they was running
 Total Time Spent on Day 1: 2 hours
 
----------------------------------
 
 Day 2:
 -Improve performance for large datasets by transitioning filtering logic from PHP to MySQL.
@@ -47,15 +46,15 @@ cases i have 1 search field and property has 1 field only
     one_input_one_result_range_null_on_left_loose_found
     one_input_one_result_range_null_on_right_loose_found
 
-//missmatch
+missmatch
     missmatch_range
     missmatch_direct
 
-//null values
+null values
     test null search
     test null price
 
-//special cases
+special cases
     test ordering and score calculation
     test At least one SearchProfile field is matching
 
