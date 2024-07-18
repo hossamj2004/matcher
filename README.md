@@ -21,19 +21,17 @@ Day 2:
 -after finished i wanted to make sure i didnt miss any casee so i arrange the tests this way :
 
 cases i have 1 search field and property has 1 field only
-    cases for input
-        Direct
-        Range with no null on both sides
-        Range with null on left side
-        Range with null on right side
+    -cases for input
+        -Direct
+        -Range with no null on both sides
+        -Range with null on left side
+        -Range with null on right side
+    -cases for result to be found
+        -strict found
+        -loosely found
+        -not found
 
-
-    cases for result to be found
-        strict found
-        loosely found
-        not found
-
-
+-Cases :
     one_input_one_result_direct_found
     one_input_one_result_direct_not_found
     one_input_one_result_range_no_null_found
@@ -46,17 +44,17 @@ cases i have 1 search field and property has 1 field only
     one_input_one_result_range_null_on_left_loose_found
     one_input_one_result_range_null_on_right_loose_found
 
-missmatch
-    missmatch_range
-    missmatch_direct
+-missmatch
+    -missmatch_range
+    -missmatch_direct
 
-null values
-    test null search
-    test null price
+-null values
+    -test null search
+    -test null price
 
-special cases
-    test ordering and score calculation
-    test At least one SearchProfile field is matching
+-special cases
+    -test ordering and score calculation
+    -test At least one SearchProfile field is matching
 
 
 i found that all cases are working
