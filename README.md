@@ -1,66 +1,78 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Day 1
 
-## About Laravel
+-Installed Laravel framework.
+-1st thing was Creating the test file: Feature/MatcherTest.php. and make the first simple test 
+-Implemented the "match" function in using PHP only ( no mysql )
+-after finalizing each case i wrote a new case then implement the code for it
+-i finished all cases and made sure they was running
+Total Time Spent on Day 1: 2 hours
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---------------------------------
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Day 2:
+-Improve performance for large datasets by transitioning filtering logic from PHP to MySQL.
+-Updated the corresponding code files to utilize the new SQL queries.
+-reran tests and every thing was ok
+-i reread the document to make sure every thing was ok but i found that i was missing some cases 
+-i rewrote missing test functions and made sure they was working 
+-i made some code enhancement
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+-after finished i wanted to make sure i didnt miss any casee so i arrange the tests this way :
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+cases i have 1 search field and property has 1 field only
+    cases for input
+        Direct
+        Range with no null on both sides
+        Range with null on left side
+        Range with null on right side
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+    cases for result to be found
+        strict found
+        loosely found
+        not found
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+    one_input_one_result_direct_found
+    one_input_one_result_direct_not_found
+    one_input_one_result_range_no_null_found
+    one_input_one_result_range_no_null_not_found
+    one_input_one_result_range_null_on_left_found
+    one_input_one_result_range_null_on_left_not_found
+    one_input_one_result_range_null_on_right_found
+    one_input_one_result_range_null_on_right_not_found
+    one_input_one_result_range_no_null_loose_found
+    one_input_one_result_range_null_on_left_loose_found
+    one_input_one_result_range_null_on_right_loose_found
 
-### Premium Partners
+//missmatch
+    missmatch_range
+    missmatch_direct
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+//null values
+    test null search
+    test null price
 
-## Contributing
+//special cases
+    test ordering and score calculation
+    test At least one SearchProfile field is matching
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
+i found that all cases are working
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Total Time Spent on the 2nd Day  about 6 hours
 
-## Security Vulnerabilities
+Total Time about 8 hours 
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+to install 
+1-run [composer install]
+2-set MySQL database settings in .env file
+3-run [artisan migrate --seed]  
+4-run [artisan serve]
+5-open url [http://127.0.0.1:8000/api/match/1] 
+
