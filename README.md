@@ -53,8 +53,8 @@
   - missmatch_direct
 
 - **Null Values Cases:**
-  - test null search
-  - test null price
+  - test null input
+  - test null result
 
 - **Special Cases:**
   - test ordering and score calculation
